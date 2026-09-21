@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/greenfield-inc/openwiki/main/install.sh -o /tmp/openwiki-install.sh
+#   curl -fsSL https://raw.githubusercontent.com/dcouple/openwiki/main/install.sh -o /tmp/openwiki-install.sh
 #   sudo bash /tmp/openwiki-install.sh
 # Or pin a version:
 #   sudo VERSION=v0.1.0 bash /tmp/openwiki-install.sh
@@ -9,7 +9,7 @@
 set -euo pipefail
 
 VERSION="${VERSION:-latest}"
-IMAGE="ghcr.io/greenfield-inc/openwiki:$VERSION"
+IMAGE="ghcr.io/dcouple/openwiki:$VERSION"
 INSTALL_DIR="${INSTALL_DIR:-/opt/openwiki}"
 
 die()  { echo "ERROR: $*" >&2; exit 1; }

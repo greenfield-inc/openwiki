@@ -14,8 +14,8 @@
 
 <p align="center">
   <a href="#license"><img src="https://img.shields.io/badge/license-TBD-lightgrey" alt="License" /></a>
-  <a href="https://github.com/greenfield-inc/openwiki/stargazers"><img src="https://img.shields.io/github/stars/greenfield-inc/openwiki?style=flat" alt="Stars" /></a>
-  <a href="https://github.com/greenfield-inc/openwiki/issues"><img src="https://img.shields.io/github/issues/greenfield-inc/openwiki" alt="Issues" /></a>
+  <a href="https://github.com/dcouple/openwiki/stargazers"><img src="https://img.shields.io/github/stars/dcouple/openwiki?style=flat" alt="Stars" /></a>
+  <a href="https://github.com/dcouple/openwiki/issues"><img src="https://img.shields.io/github/issues/dcouple/openwiki" alt="Issues" /></a>
 </p>
 
 <br/>
@@ -173,7 +173,7 @@ On a fresh Debian 12 or Ubuntu 22.04+ VPS:
 
 ```bash
 # On a fresh Debian/Ubuntu VPS:
-curl -fsSL https://raw.githubusercontent.com/greenfield-inc/openwiki/main/install.sh -o /tmp/openwiki-install.sh
+curl -fsSL https://raw.githubusercontent.com/dcouple/openwiki/main/install.sh -o /tmp/openwiki-install.sh
 sudo bash /tmp/openwiki-install.sh
 ```
 

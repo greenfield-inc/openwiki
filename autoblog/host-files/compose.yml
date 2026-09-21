@@ -1,6 +1,6 @@
 services:
   autoblog:
-    image: ghcr.io/greenfield-inc/openwiki:latest
+    image: ghcr.io/dcouple/openwiki:latest
     pull_policy: if_not_present
     env_file: .env
     volumes:
