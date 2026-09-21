@@ -21,7 +21,7 @@ Minimum-steps guide to go from a fresh VPS to a running openwiki you can reach f
 SSH into the VPS (`ssh root@<vm-ip>` or `ssh <user>@<vm-ip>`), then run:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dcouple/openwiki/main/install.sh -o /tmp/openwiki-install.sh
+curl -fsSL https://raw.githubusercontent.com/greenfield-inc/openwiki/main/install.sh -o /tmp/openwiki-install.sh
 sudo bash /tmp/openwiki-install.sh
 ```
 
@@ -30,7 +30,7 @@ The installer is idempotent and takes **under two minutes** on a warm VM. It:
 1. Detects Debian/Ubuntu and refuses to run elsewhere.
 2. Migrates a prior git-clone install at `/opt/openwiki` (prompts first; renames it to `/opt/openwiki.legacy-<timestamp>`; volumes survive).
 3. Installs Docker, Docker Compose, `jq`, `ufw` (deny-incoming, allows host sshd + `2222` + `80` + `443`), and `fail2ban`.
-4. Pulls the `ghcr.io/dcouple/openwiki:latest` image and extracts the host config (`compose.yml`, `Caddyfile.template`, `openwiki` CLI) into `/opt/openwiki/`, symlinking the CLI to `/usr/local/bin/openwiki`.
+4. Pulls the `ghcr.io/greenfield-inc/openwiki:latest` image and extracts the host config (`compose.yml`, `Caddyfile.template`, `openwiki` CLI) into `/opt/openwiki/`, symlinking the CLI to `/usr/local/bin/openwiki`.
 5. Prompts you for **three things**:
    - **Domain** — blank for HTTP-only at the IP, or `yourdomain.com` for automatic HTTPS. Blank is fine; you can add a domain later with `sudo openwiki set-domain`.
    - **SSH public key** — paste your laptop's `~/.ssh/id_ed25519.pub` on one line.
@@ -125,7 +125,7 @@ openwiki update            # pull, atomically swap host files, restart
 
 Volumes are preserved across updates; only the image and the `/opt/openwiki/{compose.yml,Caddyfile.template,openwiki}` host files are replaced.
 
-To pin a specific version, edit `/opt/openwiki/compose.yml` and change the `image:` line (e.g., `ghcr.io/dcouple/openwiki:v0.1.0`), then `openwiki update`.
+To pin a specific version, edit `/opt/openwiki/compose.yml` and change the `image:` line (e.g., `ghcr.io/greenfield-inc/openwiki:v0.1.0`), then `openwiki update`.
 
 ## 7. Backups
 
