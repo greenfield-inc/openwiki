@@ -138,7 +138,7 @@ Follow [`deploying-vps.md`](./deploying-vps.md) starting at **Section 2 (Install
 In short:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dcouple/openwiki/main/install.sh -o /tmp/openwiki-install.sh
+curl -fsSL https://raw.githubusercontent.com/greenfield-inc/openwiki/main/install.sh -o /tmp/openwiki-install.sh
 sudo bash /tmp/openwiki-install.sh
 ```
 
