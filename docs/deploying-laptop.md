@@ -33,7 +33,7 @@ docker compose version
 ## 2. Clone the repo
 
 ```bash
-git clone https://github.com/dcouple/openwiki ~/openwiki
+git clone https://github.com/greenfield-inc/openwiki ~/openwiki
 cd ~/openwiki
 ```
 

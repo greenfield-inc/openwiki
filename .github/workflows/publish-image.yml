@@ -28,10 +28,12 @@ jobs:
       - uses: docker/metadata-action@v5
         id: meta
         with:
-          images: ghcr.io/dcouple/openwiki
+          images: ghcr.io/greenfield-inc/openwiki
+          # Keep the raw v-prefixed tag used by existing installer pin examples.
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
+            type=semver,pattern={{raw}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=raw,value=edge,enable={{is_default_branch}}
